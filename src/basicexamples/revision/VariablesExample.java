@@ -47,5 +47,7 @@ public class VariablesExample {
         String wholeText = text1 + date + text2 + gradeWithComma + text3 + year + text4 + text5 + formattedCurrentDate;
         System.out.printf(wholeText);
 
+        System.out.println("KONIEC programu");
+
     }
 }
