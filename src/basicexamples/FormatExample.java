@@ -1,3 +1,4 @@
+// Package is initialize here
 package basicexamples;
 
 public class FormatExample {
