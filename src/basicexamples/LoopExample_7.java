@@ -1,4 +1,4 @@
-package basicexamples.test;
+package basicexamples;
 
 public class LoopExample_7 {
     public static void main(String[] args) {

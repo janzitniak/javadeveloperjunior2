@@ -1,6 +1,6 @@
-package basicexamples.test;
+package basicexamples;
 
-public class Variables_8 {
+public class ArraysExample_8 {
     public static void main(String[] args) {
         String cars[] = {"Honda", "Mazda", "Audi"};
         for (int i=0; i < cars.length; i++) {
