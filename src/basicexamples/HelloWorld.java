@@ -15,5 +15,6 @@ public class HelloWorld {
         System.out.println(3 * 1.5); // Mozeme dokonca pouzit pri vypise aj vzorec. Desatinne cisla sa pisu s desat. bodkou
         //TODO Este doprogramovat vzorec na delenie, ktory vypise do konzoly.
         //TODO Odoslat echo o dokonceni sefovi
+        System.out.println("Koniec programu");
     }
 }
