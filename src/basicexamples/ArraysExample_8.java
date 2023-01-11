@@ -9,5 +9,6 @@ public class ArraysExample_8 {
         for (String car:cars) {
             System.out.println(car);
         }
+        System.out.println("Koniec programu");
     }
 }
