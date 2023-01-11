@@ -30,7 +30,8 @@ public class GradeTest {
             System.out.println("Dostal si známku F. Nespravil si test.");
         }
 
-        System.out.println("Konie programu");
+        System.out.println("Koniec programu");
+        System.out.println("Ján");
 
     }
 }
