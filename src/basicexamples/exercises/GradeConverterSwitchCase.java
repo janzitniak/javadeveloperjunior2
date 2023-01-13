@@ -15,11 +15,10 @@ Program po zadaní koniec ukončí svoju činnosť a nevypíše nič.
 
 */
 
-import javax.sound.midi.Soundbank;
 import java.text.Normalizer;
 import java.util.Scanner;
 
-public class GradeConverter {
+public class GradeConverterSwitchCase {
 
     public static String stripAccents(String s)
     {
@@ -33,7 +32,7 @@ public class GradeConverter {
         String gradeAsText = "";
         Scanner scn = new Scanner(System.in); // initialization of console, inicializacia konzoly
         // Štart cyklu
-        while (true) { // while(true) reprezentuje nekonecny cyklus, kym niekde nenapiseme prikaz break
+        while (!gradeAsText.equals("koniec")) { // while(true) reprezentuje nekonecny cyklus, kym niekde nenapiseme prikaz break
             System.out.println("\nZadaj známku slovne, máš na výber: výborný, chválitebný, dobrý, dostatočný, nedostatočný");
             System.out.println("Ukončenie programu, zadaj slovo: koniec");
 
@@ -51,20 +50,26 @@ public class GradeConverter {
             // Vypiseme cislo znamky ak nie je zadany text koniec
             if (!gradeAsText.equals("koniec")) System.out.print("Výsledná známka po konverzii z textového zadania je: ");
 
-            if (gradeAsText.equals("vyborny"))
-                System.out.println(1);
-            else if (gradeAsText.equals("chvalitebny"))
-                System.out.println(2);
-            else if (gradeAsText.equals("dobry"))
-                System.out.println(3);
-            else if (gradeAsText.equals("dostatocny"))
-                System.out.println(4);
-            else if (gradeAsText.equals("nedostatocny"))
-                System.out.println(5);
-            else if (gradeAsText.equals("koniec"))
-                break; // prerusenie cyklu
-            else
-                System.out.println("Nezadal si slovnú známku správne!");
+            switch (gradeAsText) {
+                case "vyborny":
+                    System.out.println("1");
+                    break;
+                case "chvalitebny":
+                    System.out.println("2");
+                    break;
+                case "dobry":
+                    System.out.println("3");
+                    break;
+                case "dostatocny":
+                    System.out.println("1");
+                    break;
+                case "nedostatocny":
+                    System.out.println("2");
+                    break;
+                default:
+                    break;
+            }
+
         }
         // Koniec cyklu
 
