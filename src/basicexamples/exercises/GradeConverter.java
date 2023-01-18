@@ -15,9 +15,13 @@ Program po zadaní koniec ukončí svoju činnosť a nevypíše nič.
 
 */
 
+import org.junit.jupiter.api.Test;
+
 import javax.sound.midi.Soundbank;
 import java.text.Normalizer;
 import java.util.Scanner;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GradeConverter {
 
@@ -46,6 +50,7 @@ public class GradeConverter {
             gradeAsText = stripAccents(gradeAsText); // tu uz skutocne zmenime obsah premennej gradeAsText tak, ze bude bez diakritiky
             gradeAsText = gradeAsText.toLowerCase(); // tu uz zmenime text na male pismena
             gradeAsText = gradeAsText.trim(); // odstranime medzery na zaciatku a na konci textu v premennej gradeAsText a vratime spat do premennej gradeAsText
+
             System.out.println("Napísaný text už bez diakritiky je: " + gradeAsText);
 
             // Vypiseme cislo znamky ak nie je zadany text koniec
@@ -69,4 +74,10 @@ public class GradeConverter {
         // Koniec cyklu
 
     }
+
+    @Test
+    public void stripAccentsTest() {
+        assertEquals("lsctzyaie", stripAccents("ľščťžýáíé"));
+    }
+
 }
