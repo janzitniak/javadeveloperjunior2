@@ -32,6 +32,14 @@ public class ArrayListExample {
         System.out.println("--------------------");
         System.out.println(poleKnih.get(0));
 
+        // vypiseme poslednu knihu v dynamickom poli
+        System.out.println("\nPosledná kniha v zozname");
+        System.out.println("--------------------");
+
+        int indexPoslednejKnihy = poleKnih.size() - 1;
+        System.out.println( poleKnih.get(indexPoslednejKnihy) );
+        // poleKnih.lastIndexOf();
+
         System.out.println("\n\nVšetky vypísané poleKnih");
         System.out.println("---------------------");
 
@@ -43,7 +51,7 @@ public class ArrayListExample {
 
         System.out.println("\n\nVšetky vypísané poleKnih, SPOSOB c.2");
         System.out.println("---------------------");
-        // prechadzame vsetkymi prvkami dynamickeho pola poleKnih, SPOSOB c.2
+        // prechadzame vsetkymi prvkami dynamickeho pola poleKnih, SPOSOB c.2, teda for-each
         for (String vystup:poleKnih) {
             System.out.println(vystup);
         }
@@ -67,7 +75,7 @@ public class ArrayListExample {
 
         System.out.println("\n\nVšetky vypísané čísla nohy, SPOSOB 2");
         System.out.println("---------------------");
-        // vypiseme vsetky cisla noh, sposob 2
+        // vypiseme vsetky cisla noh, sposob c.2, teda for-each
         for (Integer vystup:poleCisielNoh) {
             System.out.println("Zadané číslo nohy: " + vystup);
         }
