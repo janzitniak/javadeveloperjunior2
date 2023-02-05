@@ -18,16 +18,11 @@ public class Kalkulacka {
     private static String znamienko;
 
     public static void main(String[] args) {
-        /*
-        try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-        } catch(Exception ignored) {
 
-         */
-
-        JFrame okno = new JFrame("Hello World Swing"); // vytvorime okno
+        JFrame okno = new JFrame("Kalkulačka"); // vytvorime okno
         okno.setMinimumSize(new Dimension(400, 300)); // nastavili sme oknu minimalne rozmery
         okno.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // ked kliknem na X na okne (cize vo okno) tak sa zatvori standardne
+        okno.setLocationRelativeTo(null); // vycentrovanie okna
 
         // JFrame, resp. okno by mal obsahovat panel, teda container JPanel
         JPanel panel = new JPanel(); // vytvorime objekt panel
@@ -93,7 +88,7 @@ public class Kalkulacka {
         panel.add(tlacidlo2);
 
 
-        
+
         // -START-  Tlacidlo pre scitanie
         JButton tlacidloPlus = new JButton("+"); // tlacidlo
         tlacidloPlus.setBounds(260, 150, 60, 20); // x, y, sirka, vyska
@@ -105,11 +100,11 @@ public class Kalkulacka {
             }
         });
         panel.add(tlacidloPlus);
-        // -KONIEC-  Tlacidlo pre scitanie     
+        // -KONIEC-  Tlacidlo pre scitanie
 
 
-        
-        
+
+
         // -START-  Tlacidlo pre odcitanie
         JButton tlacidloMinus = new JButton("-"); // tlacidlo
         tlacidloMinus.setBounds(260, 180, 60, 20); // x, y, sirka, vyska
@@ -122,9 +117,9 @@ public class Kalkulacka {
         });
         panel.add(tlacidloMinus);
         // -KONIEC-  Tlacidlo pre odcitanie
-        
-        
-        
+
+
+
 
         JButton tlacidloRovnasa = new JButton("="); // tlacidlo
         tlacidloRovnasa.setBounds(260, 210, 60, 20); // x, y, sirka, vyska
@@ -133,11 +128,11 @@ public class Kalkulacka {
             public void actionPerformed(ActionEvent e) {
                 String obsahDisplejaKalkulacky = textovePoleDisplejKalkulacky.getText();
                 // dalsia logika bude taka, ze premennu obsahDisplejaLKalkulacky rozdelime
-                
-                String [] castiStringu = null;
+
+                String [] castiStringu = null; // castiStringu je na zaciatku prazdne pole
                 if (znamienko.equals("+")) castiStringu = obsahDisplejaKalkulacky.split("\\+"); // rozdeli obsahDisplejaKalkulacky
                 else if (znamienko.equals("-")) castiStringu = obsahDisplejaKalkulacky.split("\\-"); // rozdeli obsahDisplejaKalkulacky
-                
+
                 double cislo1 = Double.parseDouble(castiStringu[0]); // prve cislo pred znamienkom, teda nalavo
                 double cislo2 = Double.parseDouble(castiStringu[1]); // druhe cislo za znamienkom, teda napravo
 
@@ -150,12 +145,12 @@ public class Kalkulacka {
                     vysledok = cislo1 - cislo2;
                     // viac prikazov, pretoze sme pouzili blok, cize {}
                 }
-                
+
                 // premenna vysledok je dostupna aj v tejto casti kodu
 
                 jeVysledok = true; // ak som nieco vypocital, tak som nasledne naplnil premennu jeVysledok=true, aby som ju mohol neskor otestovat
 
-                textovePoleDisplejKalkulacky.setText(String.valueOf(vysledok));
+                textovePoleDisplejKalkulacky.setText(String.valueOf(vysledok)); // skonvertovane cislo na String zobrazime
                 //textovePoleDisplejKalkulacky.setText(cislo1 + cislo2);
 
                 System.out.println(obsahDisplejaKalkulacky);
