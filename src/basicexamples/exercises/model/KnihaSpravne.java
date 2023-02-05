@@ -1,7 +1,10 @@
 package basicexamples.exercises.model;
 
-public class KnihaSpravne {
+import java.io.Serializable;
+
+public class KnihaSpravne implements Serializable {
     // fields, cize premenne triedy
+    // private static final long serialVersionUID = 1L; // odporuca sa pouziva, Intellij IDEA si serialVersionUID generuje sama, moze vsak nastat konflikt
     private String obsah;
     private String zaner;
     private String nazov;
