@@ -3,7 +3,7 @@ package basicexamples;
 public class FormatExample2 {
     public static void main(String[] args) {
         System.out.printf("Hello %s %s %n", "World", "in Java");
-        System.out.println("Test - is it next line?");
+        System.out.println("Tabulka - is it next line?");
         System.out.printf("baeldung%nline%nterminator");
 
         System.out.printf("%n%n"); // 2 empty lines

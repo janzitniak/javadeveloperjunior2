@@ -27,6 +27,5 @@ public class StringExample_4 {
         String txt3 = "We are the so-called \"Vikings\" from the north.";
         System.out.println(txt3);
         System.out.println("Text1 on first line \\nText2 on second line");
-
     }
 }

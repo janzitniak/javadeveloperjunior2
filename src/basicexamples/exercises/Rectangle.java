@@ -65,14 +65,14 @@ public class Rectangle {
     }
 
 /*
-    @Test
+    @Tabulka
     public void testGetPerimeter() {
         assertEquals(10, getPerimeter(2,3));
         assertEquals(13, getPerimeter(2.5,4));
         assertEquals(0, getPerimeter(0,0));
     }
 
-    @Test
+    @Tabulka
     public void testGetArea() {
         assertEquals(6, getArea(2, 3));
         assertEquals(10, getArea(2, 5));

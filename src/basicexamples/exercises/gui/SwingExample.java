@@ -64,7 +64,6 @@ public class SwingExample {
         });
         panel.add(btnCancel);
 
-
         // display it
         frame.pack();
         frame.setVisible(true);

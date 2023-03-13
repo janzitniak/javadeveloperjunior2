@@ -11,25 +11,21 @@ public class SerializeDeserializeExample {
         knihaSpravne1.setAutor("Anna Schonn");
         knihaSpravne1.setZaner("Ženský román");
 
-        FileOutputStream fileOutputStream
-                = new FileOutputStream("yourfile.txt");
-        ObjectOutputStream objectOutputStream
-                = new ObjectOutputStream(fileOutputStream);
+        FileOutputStream fileOutputStream = new FileOutputStream("yourfile.txt");
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(knihaSpravne1);
         objectOutputStream.flush();
         objectOutputStream.close();
 
 
-        FileInputStream fileInputStream
-                = new FileInputStream("yourfile.txt");
-        ObjectInputStream objectInputStream
-                = new ObjectInputStream(fileInputStream);
-
+        FileInputStream fileInputStream = new FileInputStream("yourfile.txt");
+        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
         KnihaSpravne knihaSpravneZoSuboru = (KnihaSpravne) objectInputStream.readObject();
         objectInputStream.close();
 
-
-        System.out.println(knihaSpravneZoSuboru);
+        System.out.println(knihaSpravneZoSuboru.getNazov());
+        System.out.println(knihaSpravneZoSuboru.getAutor());
+        System.out.println(knihaSpravneZoSuboru.getZaner());
 
     }
 }

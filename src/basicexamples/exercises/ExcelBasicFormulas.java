@@ -12,11 +12,11 @@ Vytvorte triedu s názvom ExcelBasicFormulas, v ktorej budú 2 základné funkci
 */
 public class ExcelBasicFormulas {
 
-    public static double getSum(double [] values) {
+    public static double getSum(double [] values2) {
         // tu musi byt logika vypoctu
         double sum = 0;
-        for (int i = 0; i < values.length; i++) { // cyklus s pevnym poctom opakovani, i nadobuda hodnoty od 0 do 3
-            sum = sum + values[i]; // Java interpretuje tento riadok najprv tak, ze zoberie alebo vypocita to, co je napravo od =
+        for (int i = 0; i < values2.length; i++) { // cyklus s pevnym poctom opakovani, i nadobuda hodnoty od 0 do 3
+            sum = sum + values2[i]; // Java interpretuje tento riadok najprv tak, ze zoberie alebo vypocita to, co je napravo od =
         }
         return sum;
     }
@@ -64,7 +64,8 @@ public class ExcelBasicFormulas {
     public static void main(String[] args) {
         // Chceme vypisat vysledky nasledujucich Excel funkcii v poradi: SUM, AVERAGE, COUNT, MAX, MIN
         double[] values = {1, 2, 3}; // naplname pole s nazvom values hodnotami
-
+        
+        
         // V premennej sum zostanem posledny sucet
         System.out.println("SUM " + getSum(values));
         System.out.println("AVERAGE " + getAverageFromArrayWithoutSumMethod(values));
